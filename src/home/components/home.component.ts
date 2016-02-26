@@ -8,7 +8,8 @@ import {Observable} from 'rxjs/rx';
 @Component({
   selector: 'home',
   directives : [ExperienceComponent, SkillComponent],
-  templateUrl: './home/components/home.component.html'
+  templateUrl: './home.html',
+  moduleId: module.id
 })
 export class HomeComponent {
   public experiences : FirebaseArray;
