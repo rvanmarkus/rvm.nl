@@ -83,7 +83,10 @@ export const PROD_NPM_DEPENDENCIES: IDependency[] = normalizeDependencies([
 
 // Declare local files that needs to be injected
 export const APP_ASSETS: IDependency[] = [
-  { src: `${ASSETS_SRC}/main.css`, inject: true }
+  { src: `${ASSETS_SRC}/main.css`, inject: true },
+  { src: `${ASSETS_SRC}/plugins/bootstrap/css/bootstrap.min.css`, inject: true},
+  { src: `${ASSETS_SRC}/plugins/font-awesome/css/font-awesome.css`, inject: true},
+  { src: `${ASSETS_SRC}/css/styles-5.css`, inject: true}
 ];
 
 

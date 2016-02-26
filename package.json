@@ -92,7 +92,9 @@
     "typings": "^0.6.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "yargs": "^3.32.0"
+    "yargs": "^3.32.0",
+    "firebase": "^2.4.1",
+    "firebase-angular2": "^0.7.2"
   },
   "dependencies": {
     "angular2": "2.0.0-beta.7",

@@ -6,6 +6,15 @@
   <title><%= APP_TITLE %></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal website Robbert van Markus">
+  <meta name="author" content="Robbert van Markus">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+
   <!-- inject:css -->
   <!-- endinject -->
 </head>
@@ -42,6 +51,8 @@
   <% if (ENV === 'dev') { %>
   <script>System.config(<%= JSON.stringify(SYSTEM_CONFIG) %>)</script>
   <% } %>
+
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
 
   <!-- libs:js -->
   <!-- endinject -->

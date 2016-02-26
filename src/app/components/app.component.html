@@ -1,3 +1,62 @@
-<sd-toolbar></sd-toolbar>
-<sd-navbar></sd-navbar>
-<router-outlet></router-outlet>
+<!--<sd-toolbar></sd-toolbar>-->
+<!--<sd-navbar></sd-navbar>-->
+<!--<router-outlet></router-outlet>-->
+<!--<section class="sample-app-content">
+  <nav>
+    <a [routerLink]="['/Home']">Home</a>
+  </nav>
+
+</section>-->
+
+<div class="wrapper">
+  <div class="sidebar-wrapper">
+    <div class="profile-container">
+      <img class="profile" src="assets/images/robbertvanmarkus.png" alt="" />
+      <h1 class="name">Robbert van Markus</h1>
+      <h3 class="tagline">Developer</h3>
+    </div><!--//profile-container-->
+
+    <div class="contact-container container-block">
+      <ul class="list-unstyled contact-list">
+        <li class="email"><i class="fa fa-envelope"></i><a href="mailto:robbert@vanmarkus.com">robbert@vanmarkus.com</a></li>
+        <li class="phone"><i class="fa fa-phone"></i><a href="tel:+31616522024">+31 6 16 522 024</a></li>
+        <li class="website"><i class="fa fa-globe"></i><a href="http://robbertvanmarkus.nl" target="_blank">robbertvanmarkus.nl</a></li>
+        <li class="linkedin"><i class="fa fa-linkedin"></i><a href="http://nl.linkedin.com/in/rvanmarkus" target="_blank">linkedin.com/in/rvanmarkus</a></li>
+        <li class="github"><i class="fa fa-github"></i><a href="http://github.com/rvanmarkus" target="_blank">github.com/rvanmarkus</a></li>
+        <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/rvanmarkus" target="_blank">@rvanmarkus</a></li>
+      </ul>
+    </div><!--//contact-container-->
+    <div class="education-container container-block">
+      <h2 class="container-block-title">Education</h2>
+      <div class="item" *ngFor="#learning of (education | async)">
+        <h4 class="degree">{{learning.title}}</h4>
+        <h5 class="meta">{{learning.location}}</h5>
+        <div class="time">{{learning.year}}</div>
+      </div>
+    </div><!--//education-container-->
+
+    <div class="languages-container container-block">
+      <h2 class="container-block-title">Languages</h2>
+      <ul class="list-unstyled interests-list">
+        <li *ngFor="#language of (languages | async)">{{language.language}} <span class="lang-desc">({{language.level}})</span></li>
+      </ul>
+    </div><!--//interests-->
+
+    <div class="interests-container container-block">
+      <h2 class="container-block-title">Interests</h2>
+      <ul class="list-unstyled interests-list">
+        <li *ngFor="#interest of (interests | async)">{{interest}}</li>
+        <li>Snowboarding</li>
+        <li>Cooking</li>
+      </ul>
+    </div><!--//interests-->
+
+  </div><!--//sidebar-wrapper-->
+
+  <div class="main-wrapper">
+    <router-outlet>
+
+    </router-outlet>
+
+  </div><!--//main-body-->
+</div>

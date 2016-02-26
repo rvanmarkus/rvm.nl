@@ -2,12 +2,16 @@ import {provide, enableProdMode} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
 import {ROUTER_PROVIDERS, APP_BASE_HREF} from 'angular2/router';
 import {AppComponent} from './app/components/app.component';
+import {FirebaseService} from 'firebase-angular2/core';
+import {ProfileService} from './profile.service';
 
 if ('<%= ENV %>' === 'prod') { enableProdMode(); }
 
 bootstrap(AppComponent, [
   ROUTER_PROVIDERS,
-  provide(APP_BASE_HREF, { useValue: '<%= APP_BASE %>' })
+  provide(APP_BASE_HREF, { useValue: '<%= APP_BASE %>' }),
+  ProfileService,
+  provide(FirebaseService, {useFactory: () => new FirebaseService(new Firebase('https://rvm.firebaseio.com/'))})
 ]);
 
 // In order to start the Service Worker located at "./sw.js"
