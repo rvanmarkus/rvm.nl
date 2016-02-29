@@ -4,15 +4,15 @@ import {Injectable} from 'angular2/core';
 @Injectable()
 export class ProfileService {
 
-    private service: FirebaseService;
+		private service: FirebaseService;
 
-    constructor(firebaseService: FirebaseService) {
-        this.service = firebaseService;
-    }
+		constructor(firebaseService: FirebaseService) {
+				this.service = firebaseService;
+		}
 
-    getSkills() {
-        return this.service.child('skills').asArray();
-    }
+		getSkills() {
+				return this.service.child('skills').asArray();
+		}
 
 	getExperiences() {
 		return this.service.child('experience').asArray();
